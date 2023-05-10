@@ -9,6 +9,7 @@
 #include "functions.h"
 #include "reversePolishCalculator.h"
 #include "stack.h"
+#include "stdlib.h"
 
 #define CALCULATOR_HEADERS_H
 
