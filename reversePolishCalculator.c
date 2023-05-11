@@ -36,6 +36,8 @@ float calculateTwoOperands(float firstOperand, float secondOperand, char operato
                 printf("Error: Division by zero.\n");
                 return 0;
             }
+        case '^':
+            return powf(firstOperand,secondOperand);
         default:
             printf("Error: Unknown operator.\n");
             return 0;

@@ -6,11 +6,11 @@
 
 int isEntity(char character)
 {
-    return (character == '+' || character == '-' || character == '*' || character == '/' || character == ']' || character == ')') ? 1 : 0;
+    return (isOperator(character) || character == ']' || character == ')') ? 1 : 0;
 }
 int isOperator(char character)
 {
-    return (character == '+' || character == '-' || character == '*' || character == '/') ? 1 : 0;
+    return (character == '+' || character == '-' || character == '*' || character == '/' || character == '^') ? 1 : 0;
 }
 int isComplexMath(char character)
 {
@@ -25,15 +25,17 @@ int operatorValue(char character)
         case '*':
         case '/':
             return 2;
+        case '^':
+            return 3;
         case SIN:
         case COS:
         case TAN:
         case ARCTAN:
         case SQRT:
-            return 3;
+            return 4;
         case ')':
         case ']':
-            return 4;
+            return 5;
         default:
             return 0;
     }
