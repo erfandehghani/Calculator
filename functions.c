@@ -21,21 +21,21 @@ int operatorValue(char character)
     switch (character) {
         case '+':
         case '-':
-            return 1;
+            return 2;
         case '*':
         case '/':
-            return 2;
-        case '^':
             return 3;
+        case '^':
+            return 4;
         case SIN:
         case COS:
         case TAN:
         case ARCTAN:
         case SQRT:
-            return 4;
+            return 5;
         case ')':
         case ']':
-            return 5;
+            return 1;
         default:
             return 0;
     }
